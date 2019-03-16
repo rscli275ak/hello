@@ -1,0 +1,13 @@
+# Always give version number at first
+version: '3.5'
+
+# These are the containers which will be instaciated by the docker-engine
+services:
+
+  # And this is the webserver
+  webserver:
+    image: php:7-apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html
