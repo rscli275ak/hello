@@ -8,6 +8,8 @@ services:
   webserver:
     image: php:7-apache
     ports:
-      - "80:80"
+     # host_port:container_port
+      - "8081:80"
     volumes:
-      - ./www:/var/www/html
+    # host_port:container_port
+      - ../:/var/www/html:rw,cached
